@@ -17,14 +17,13 @@ function toggleDark() {
     const branco = document.querySelector(".logo-branco");
 
     if (document.body.classList.contains("dark")) {
-        preto.style.display = "none";
-        branco.style.display = "block";
+        preto.style.opacity = "0";
+        branco.style.opacity = "1";
     } else {
-        preto.style.display = "block";
-        branco.style.display = "none";
+        preto.style.opacity = "1";
+        branco.style.opacity = "0";
     }
 }
-
 /* Enviar pedido */
 async function enviarPedido() {
     let nome = document.getElementById("nome").value.trim();
