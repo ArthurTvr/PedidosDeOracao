@@ -113,3 +113,5 @@ setInterval(async () => {
         console.log("Erro ao verificar novos pedidos.");
     }
 }, 10000);
+
+// Fim do script.js
