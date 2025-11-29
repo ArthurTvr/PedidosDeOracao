@@ -25,6 +25,7 @@ function toggleDark() {
   if (document.body.classList.contains("dark")) {
     preto.style.opacity = "0";
     branco.style.opacity = "1";
+    branco.style.display = "block";
   } else {
     preto.style.opacity = "1";
     branco.style.opacity = "0";
