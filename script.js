@@ -103,3 +103,20 @@
     }
 }
       carregarPedidos();
+
+      let ultimoTotal = 0;
+
+// Atualização automática a cada 10 segundos
+setInterval(async () => {
+    try {
+        const res = await fetch(API_URL);
+        const dados = await res.json();
+
+        if (dados.length !== ultimoTotal) {
+            ultimoTotal = dados.length;
+            carregarPedidos(); // Atualiza a tela automaticamente
+        }
+    } catch (e) {
+        console.log("Erro ao verificar novos pedidos.");
+    }
+}, 10000); // 10 segundos
