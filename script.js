@@ -89,7 +89,7 @@ async function carregarPedidos() {
     } catch (e) {
         container.innerHTML = `
             <p style="text-align:center; color:gray;">
-                Não foi possível carregar os pedidos.
+                Ainda não há pedidos.
             </p>`;
     }
 }
